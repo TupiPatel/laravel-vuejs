@@ -53,3 +53,9 @@
     font-weight: bold;
     color: #000066;
 }
+
+/* contact page css */
+
+.contact-title{
+    text-decoration: underline;
+}
