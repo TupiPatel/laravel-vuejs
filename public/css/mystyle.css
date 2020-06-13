@@ -1,7 +1,7 @@
 
 .main-container
 {
-    margin-top: 78px;
+    margin-top: 100px;
 }
 .navbar-sticky-top
 {
@@ -58,4 +58,63 @@
 
 .contact-title{
     text-decoration: underline;
+    font-weight: bold;
+}
+
+.text-field{
+    width: -webkit-fill-available;
+    background: #CCCCCC;
+    border: 0;
+    padding: 9px;
+    margin-top: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.div-center
+{
+    text-align: center;
+    padding-top: 15px;
+    font-size: 14px;
+}
+
+.btn-style
+{
+    background: #999999;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 0;
+    outline: 0;
+    font-size: 14px;
+    margin-left: 25px;
+}
+
+.contact-note{
+    text-align: center;
+    padding: 35px;
+}
+.footer-right{
+    
+    float: right;
+}
+
+.extra-footer{
+    background-color: #000066;
+    padding: 2% 5% 2% 5%;
+    color: white;
+}
+
+.footer-a {
+    color: #FF6600 !important;
+}
+
+#social-icons  a:hover {
+    color: #999999 !important;
+}
+#social-icons  a {
+    color:#ffffff !important;
+}
+
+#footer-links a:hover {
+    color: #999999 !important;
 }

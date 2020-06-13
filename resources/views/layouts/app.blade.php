@@ -84,18 +84,75 @@
             @yield('content')
         </main>
         <div>
-           <!-- Footer -->
-            <footer class="page-footer font-small blue">
+        <!--
+            <footer class=" font-small  extra-footer" >
+
+           
+            <div class="footer-copyright  py-3" >©2013-2016 BeMo Academic Consulting Inc. All rights reserved.
+                <a href="" class="contact-title footer-a">Disclaimer & Privacy Policy</a>
+                <a href="" class="contact-title footer-a"> Contact Us</a>
+                <div class="footer-right" id="social-icons">
+                    <a href="" class="btn-floating btn-lg btn-fb"> <i class="fab fa-facebook-f"></i> </a> 
+                    <a href="" class="btn-floating btn-lg btn-tw"> <i class="fab fa-twitter "></i> </a> 
+                </div>
+            </div>
+         
+           
+            </footer>
+        -->
+
+            <!-- Footer -->
+            <footer class="page-footer font-small extra-footer">
+
+            <div >
+                <div class="">
+
+                <!-- Grid row-->
+                <div class="row py-4 d-flex align-items-center">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-9 text-center text-md-left mb-4 mb-md-0" id="footer-links">
+                    <h6 class="mb-0">©2013-2016 BeMo Academic Consulting Inc. All rights reserved.
+                    <a href="" class="contact-title footer-a">Disclaimer & Privacy Policy</a>
+                    <a href="" class="contact-title footer-a"> Contact Us</a></h6>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6 col-lg-2 text-center text-md-right" id="social-icons">
+
+                    <!-- Facebook -->
+                    <a class="fb-ic btn-lg">
+                        <i class="fab fa-facebook-f white-text mr-4"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic btn-lg">
+                        <i class="fab fa-twitter white-text mr-4"> </i>
+                    </a>
+                    
+
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row-->
+
+                </div>
+            </div>
+
+            
 
             <!-- Copyright -->
-            <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
-            </div>
+           <!-- <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+            </div>-->
             <!-- Copyright -->
 
             </footer>
             <!-- Footer -->
+                    
         <div>
+        
     </div>
 </body>
 </html>

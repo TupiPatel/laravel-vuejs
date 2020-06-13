@@ -20,6 +20,12 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/contact', 'HomeController@contact')->name('contact');
+Route::get('/contact', 'ContactFormController@contact')->name('contact');
 
-Route::resource('/task', 'TaskController');
+Route::post('/submit', 'ContactFormController@submit');
+
+/*Route::prefix('admin')->group(function () {
+    Route::get('dashboard', 'DashboardController@index');
+});
+*/
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
