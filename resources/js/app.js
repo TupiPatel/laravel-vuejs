@@ -26,6 +26,7 @@ require("@fortawesome/fontawesome-free/css/all.min.css");
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('home', require('./components/HomeComponent.vue').default);
 Vue.component('contact', require('./components/ContactComponent.vue').default);
+Vue.component('admin', require('./components/AdminComponent.vue').default);
 
 
 
