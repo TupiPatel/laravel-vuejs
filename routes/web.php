@@ -29,3 +29,5 @@ Route::post('/submit', 'ContactFormController@submit');
 });
 */
 Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
+
+Route::post('formSubmit','ImageController@formSubmit');

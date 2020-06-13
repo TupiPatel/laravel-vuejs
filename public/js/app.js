@@ -2109,9 +2109,85 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "adminHome" // using EXACTLY this name is essential
-
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  },
+  data: function data() {
+    return {
+      name: '',
+      image: '',
+      success: ''
+    };
+  },
+  methods: {
+    onImageChange: function onImageChange(e) {
+      console.log(e.target.files[0]);
+      this.image = e.target.files[0];
+    },
+    formSubmit: function formSubmit(e) {
+      e.preventDefault();
+      var currentObj = this;
+      var config = {
+        headers: {
+          'content-type': 'multipart/form-data'
+        }
+      };
+      var formData = new FormData();
+      formData.append('image', this.image);
+      axios.post('/formSubmit', formData, config).then(function (response) {
+        currentObj.success = response.data.success;
+      })["catch"](function (error) {
+        currentObj.output = error;
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -38805,8 +38881,80 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "main-container" }, [
-    _vm._v("   \n        You are admin!\n")
+  return _c("div", { staticClass: "container main-container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }, [
+            _vm._v("Laravel Vue JS Image Upload - ItSolutionStuff.com")
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card-body" }, [
+            _vm.success != ""
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "alert alert-success",
+                    attrs: { role: "alert" }
+                  },
+                  [
+                    _vm._v(
+                      "\n\n                      " +
+                        _vm._s(_vm.success) +
+                        "\n\n                    "
+                    )
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "form",
+              {
+                attrs: { enctype: "multipart/form-data" },
+                on: { submit: _vm.formSubmit }
+              },
+              [
+                _c("strong", [_vm._v("Name:")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.name,
+                      expression: "name"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: { type: "text" },
+                  domProps: { value: _vm.name },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.name = $event.target.value
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c("strong", [_vm._v("Image:")]),
+                _vm._v(" "),
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "file" },
+                  on: { change: _vm.onImageChange }
+                }),
+                _vm._v(" "),
+                _c("button", { staticClass: "btn btn-success" }, [
+                  _vm._v("Submit")
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
   ])
 }
 var staticRenderFns = []

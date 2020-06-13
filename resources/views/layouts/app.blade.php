@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Make No Index -->
-    <meta name="robots" content="noindex" /> 
+    <meta name="robots" content="@yield('robots')" /> 
+    <meta name="description" content="@yield('description')">
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -55,7 +56,7 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown"  class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}  <span class="caret"></span>
                                 </a>
 
@@ -77,6 +78,10 @@
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('contact') }}">{{ __('Contact Us') }}</a>
+                                </li>
+                            @else
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.home') }}">{{ __('Home') }}</a>
                                 </li>
                             @endif
                         @endguest
